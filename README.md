@@ -249,4 +249,43 @@ do {
 
 <details>
   <summary>Array - Matriz </summary>
+
+> A matriz multidimensional pode ser declarada adicionando vírgulas entre colchetes. Por exemplo, [,] declara uma matriz bidimensional, [, ,] declara uma matriz tridimensional, [, , ,] declara uma matriz quadridimensional e assim por diante.
+
+- Exemplo
+````c#
+int[,] matriz = new int[3, 3];
+matriz[0, 0] = 1;
+matriz[0, 1] = 1;
+matriz[0, 2] = 2;
+
+matriz[1, 0] = 8;
+matriz[1, 1] = 3;
+matriz[1, 2] = 1;
+
+matriz[2, 0] = 9;
+matriz[2, 1] = 9;
+matriz[2, 2] = 4;
+
+````
+
+- Acessando o valor de um índice da matriz
+````c#
+Console.WriteLine(matriz[1,2]); // vai impirmir o valor 1 no console
+````
+
+- imprimindo todos os valores da matriz
+````c#
+for (int i = 0; i < matriz.Lenght; i++) {
+    for (int j = 0; j < matriz.Lenght; j++) {
+        Console.WriteLine(matriz[i, j]); 
+    }
+}
+````
+
+````c#
+foreach(int i in matriz) {
+  Console.WriteLine(i); 
+}
+````
 </details>
