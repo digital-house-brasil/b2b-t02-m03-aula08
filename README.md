@@ -144,7 +144,7 @@ swicth (opcao) {
     case 2: 
         Console.WriteLine('opção 2'); 
         break;
-    defaul:
+    default:
         Console.WriteLine('opção inválida'); 
         break;
 }
@@ -153,16 +153,100 @@ swicth (opcao) {
 
 <details>
   <summary>Laço de repetição - Loop</summary>
+
+- for
+> É a estrutura de repetição que utilizamos quando sabemos a quantidade de repetições que um bloco de código deve ser executado
+
+````c#
+for (int i = 1; i <= 10; i++) //Vai imprimir no console a contagem de 1 a 10
+  Console.WriteLine(i); 
+````
+
+- while
+>  Executa o loop enquanto a condição for verdadeira. 
+
+````c#
+int i = 1;
+while (i <= 10) { //Vai imprimir no console a contagem de 1 a 10
+  Console.WriteLine(i);
+  i++;
+} 
+````
+
+- do while
+> Executa o loop primeiro e depois verifica a condição.
+
+````c#
+int i = 1;
+do { //Vai imprimir no console a contagem de 1 a 10
+  Console.WriteLine(i);
+  i++;
+} while(i <= 10);
+````
 </details>
 
 <details>
   <summary>Array - Vetor</summary>
+
+- Array:
+> Os arrays são estruturas que servem para guardar dados, e organizá-los. Seu objetivo é ser um espaço fixo na memória do computador que armazena elementos. Esses elementos podem ser acessados por um tipo de indicação, que chamamos de índice.
+
+> Todo array inicia da posição 0
+
+- Declaração de array
+````c#
+string semana = {"Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"};
+````
+
+````c#
+string semana = new string[] {"Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"};
+````
+
+````c#
+string semana = new string[6];
+semana[0] = "Segunda";
+semana[1] = "Terça";
+semana[2] = "Quarta";
+semana[3] = "Quinta";
+semana[4] = "Sexta";
+semana[5] = "Sábado";
+semana[6] = "Domingo";
+````
+
+- Para acessar um valor referente ao índice do array:
+````c#
+Console.WriteLine(semana[3]); // Irá imprimir o valor Quinta
+````
+
+- Imprimindo todos os valores de um array
+````c#
+for (int i = 0; i < semana.Lenght; i++)
+  Console.WriteLine(semana[i]);
+````
+
+````c#
+foreach(string valor in semana)
+  Console.WriteLine(valor);
+````
+
+````c#
+int i = 0;
+while(i < semana.Lenght) {
+  Console.WriteLine(semana[i]);
+  i++;
+}
+````
+
+````c#
+int i = 0;
+do {
+  Console.WriteLine(semana[i]);
+  i++;
+} while(i < semana.Lenght)
+````
+
 </details>
 
 <details>
   <summary>Array - Matriz </summary>
-</details>
-
-<details>
-  <summary>Array - Métodos </summary>
 </details>
